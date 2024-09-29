@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akshita Sharma</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Header Styles */
+    #desktop-nav {
+      background-color: #2c3e50;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ecf0f1;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #3498db;
+    }
+
+    /* Main Content Styles */
+    main {
+      max-width: 1200px;
+      margin: 6rem auto 0;
+      padding: 0 2rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .section__text__p1 {
+      text-align: center;
+      color: #7f8c8d;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Profile Section */
+    #profile {
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .section__text__p2 {
+      font-size: 1.25rem;
+      color: #34495e;
+      margin-bottom: 1rem;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-color-1 {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .btn-color-2 {
+      background-color: #2c3e50;
+      color: white;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    #socials-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .icon:hover {
+      transform: scale(1.1);
+    }
+
+    /* About Section */
+    .about-containers {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .details-container {
+      flex: 1;
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Skills Section */
+    .skill-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .skill {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill i {
+      font-size: 2rem;
+      color: #3498db;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Projects Section */
+    .project-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    /* Contact Section */
+    .contact-info-upper-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-info-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    footer .nav-links {
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .about-containers {
+        flex-direction: column;
+      }
+
+      .skill-container {
+        justify-content: space-around;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="desktop-nav">
+    <nav>
+      <div class="logo">Akshita Sharma</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="profile">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Akshita Sharma</h1>
+      <p class="section__text__p2">Full Stack Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/akshita-sharma-873835249/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/akshita2003'" />
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h2 class="title">About Me</h2>
+      <div class="about-containers">
+        <div class="details-container">
+          <h3>Experience</h3>
+          <p>6 Months<br />Web Development</p>
+          <p>Telus International, Noida</p>
+        </div>
+        <div class="details-container">
+          <h3>Education</h3>
+          <p>B.Tech CSE</p>
+          <p>Sharda University (2021-2025)</p>
+        </div>
+      </div>
+      <div class="text-container">
+        <p>
+          Hello! I'm a passionate Web Developer committed to crafting responsive and engaging web applications. I specialize in creating intuitive interfaces that elevate user interactions. My goal is to blend creativity and functionality to deliver seamless digital experiences.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h2 class="title">Skill Set</h2>
+      <div class="skill-container">
+        <div class="skill">
+          <i class="fab fa-html5"></i>
+          <h3>HTML</h3>
+        </div>
+        <div class="skill">
+          <i class="fab fa-css3"></i>
+          <h3>CSS</h3>
+        </div>
+        <div class="skill">
+          <i class="fab fa-java"></i>
+          <h3>Java</h3>
+        </div>
+        <div class="skill">
+          <i class="fab fa-js"></i>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="skill">
+          <i class="fab fa-react"></i>
+          <h3>React</h3>
+        </div>
+        <div class="skill">
+          <i class="fab fa-github-alt"></i>
+          <h3>Git/Github</h3>
+        </div>
+        <div class="skill">
+          <i class="fas fa-database"></i>
+          <h3>MySQL</h3>
+        </div>
+        <div class="skill">
+          <i class="fab fa-python"></i>
+          <h3>Python</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h2 class="title">Projects</h2>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/project-1.jpg" alt="Project 1" class="project-img" />
+            <h3>BuyEase</h3>
+            <p>Buyease is a user-friendly e-commerce platform that simplifies online shopping with intuitive navigation, seamless checkout, and powerful seller tools for enhanced business management.</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/akshita2003/E-commerce'">
+                Github
+              </button>
+              <button class="btn btn-color-1" onclick="location.href='https://akshita2003.github.io/E-commerce/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <!-- Add more project containers here -->
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h2 class="title">Contact Me</h2>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon" />
+          <p><a href="mailto:akshitasharma2903@gmail.com">akshitasharma2903@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon" />
+          <p><a href="https://www.linkedin.com/in/akshita-sharma-873835249/">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/leetcode.png" alt="LeetCode icon" class="icon" />
+          <p><a href="https://leetcode.com/u/akshita2003/">LeetCode</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/experience.png" alt="Resume icon" class="icon" />
+          <p><a href="https://akshita2003.github.io/Resume/">Resume</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Akshita Sharma. All rights reserved.</p>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
+</html>

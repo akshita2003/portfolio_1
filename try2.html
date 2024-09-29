@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akshita Sharma</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    p {
+      color: rgb(85, 85, 85);
+    }
+
+    /* Header Styling */
+    nav,
+    .nav-links {
+      display: flex;
+    }
+
+    nav {
+      justify-content: space-around;
+      align-items: center;
+      height: 17vh;
+      background-color: #333; /* Header background color */
+    }
+
+    .nav-links {
+      gap: 2rem;
+      list-style: none;
+      font-size: 1.5rem;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      text-decoration-color: white;
+    }
+
+    a:hover {
+      color: grey;
+      text-decoration: underline;
+      text-underline-offset: 1rem;
+      text-decoration-color: rgb(181, 181, 181);
+    }
+
+    .logo {
+      font-size: 2rem;
+      color: white;
+    }
+
+    .logo:hover {
+      cursor: default;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #333; /* Footer background color */
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+    }
+
+    footer .nav-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    footer .nav-links li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer .nav-links li a:hover {
+      color: grey;
+    }
+
+    /* Transition */
+    a,
+    .btn {
+      transition: all 300ms ease;
+    }
+
+    /* Other styles for sections */
+    section {
+      padding: 60px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <nav>
+    <div class="logo">Akshita Sharma</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <section id="profile">
+    <h1>Welcome to my portfolio</h1>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2024 Akshita Sharma. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

@@ -37,6 +37,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  background-color:rgb(85, 85, 85);
 }
 
 .nav-links {
@@ -46,9 +47,9 @@ nav {
 }
 
 a {
-  color: black;
+  color:rgb(215, 219, 222);
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: rgb(225, 223, 223);
 }
 
 a:hover {
@@ -60,6 +61,7 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+  color: rgb(215, 219, 222);
 }
 
 .logo:hover {
@@ -68,83 +70,7 @@ a:hover {
 
 /* HAMBURGER MENU */
 
-#hamburger-nav {
-  display: none;
-}
-
-.hamburger-menu {
-  position: relative;
-  display: inline-block;
-}
-
-.hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
-  width: 30px;
-  cursor: pointer;
-}
-
-.hamburger-icon span {
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: white;
-  width: fit-content;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links a {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-  transition: all 0.3 ease-in-out;
-}
-
-.menu-links li {
-  list-style: none;
-}
-
-.menu-links.open {
-  max-height: 300px;
-}
-
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
+/* Commented out hamburger menu styles */
 
 /* SECTIONS */
 
@@ -158,8 +84,6 @@ section {
 
 .section-container {
   display: flex;
-  /* width: 400px; */
-  /* height: 1000px; */
 }
 
 /* PROFILE SECTION */
@@ -259,10 +183,6 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-  gap: 1rem;
-}
-
 /* ABOUT SECTION */
 
 #about {
@@ -283,7 +203,6 @@ section {
 .about-containers,
 .about-details-container {
   display: flex;
-  /* height: 200px; */
 }
 
 .about-pic {
@@ -309,12 +228,6 @@ section {
 .section-container {
   gap: 4rem;
   height: 80%;
-}
-
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
 }
 
 /* EXPERIENCE SECTION */
@@ -390,6 +303,7 @@ article .icon {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  color: #111;
 }
 
 .contact-info-upper-container {
@@ -401,6 +315,7 @@ article .icon {
   background: (250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
+  background-color: #777;
 }
 
 .contact-info-container {
@@ -409,14 +324,19 @@ article .icon {
   justify-content: center;
   gap: 0.5rem;
   margin: 1rem;
+  color: #111;
+ 
 }
 
 .contact-info-container p {
   font-size: larger;
+  color: #000; /* Changed to black */
+  
 }
 
 .contact-icon {
   cursor: default;
+  
 }
 
 .email-icon {
@@ -426,13 +346,20 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
-  margin: 0 1rem;
+  background-color: rgb(85, 85, 85);
+  height: 17vh;
+  margin-top: 100px;
+  display: flex;              /* Add flexbox layout */
+  justify-content: center;     /* Horizontally center the content */
+  align-items: center;         /* Vertically center the content */
 }
 
 footer p {
-  text-align: center;
+  color: white;
+  margin: 0; /* Remove default margin for accurate centering */
 }
+
+
 .skills {
   background-color: #111;
   padding: 50px 0;
@@ -450,7 +377,7 @@ footer p {
 .skill {
   flex: 0 0 calc(20% - 1rem);
   padding: 20px;
- color: white;
+  color: white;
   background-color: #333;
   border-radius: 8px;
   text-align: center;
@@ -472,8 +399,49 @@ footer p {
   font-size: 16px;
   color: #777;
 }
+
 .skill:hover {
   transform: scale(1.1);
+}/* Slider container */
+.slider {
+  position: relative;
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;}
   
+
+/* Slider wrapper containing all slides */
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
 }
-  
+
+/* Individual slides */
+.slide {
+  min-width: 100%; /* Each slide takes up 100% width */
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Navigation buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
